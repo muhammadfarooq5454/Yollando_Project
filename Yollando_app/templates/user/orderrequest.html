@@ -1,0 +1,134 @@
+{% extends 'user/base.html' %}
+{% block body %}
+<div class="page-header align-items-end min-vh-100">
+    {% comment %} <span class="mask bg-gradient-dark opacity-6"></span> {% endcomment %}
+    <div class="container my-7">
+        <div class="row">
+            <div class="col-12">
+                <div class="card z-index-0">
+                    <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                        <div class="py-3 pe-1 header-card">
+                            <div class="text-left">
+                                <a class="text-white w-100 my-4 mb-2 mx-4">Order Request</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <!-- <form role="form" class="text-start">
+                                <div class="form-group">
+                                    <label for="formGroupExampleInput">Example label</label>
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+                                </div>
+                        </form> -->
+                        <form>
+                            <div class="form-group">
+                                <h5 class="mx-1">Customer Information</h5>
+                                <label for="form_select" class="mx-1">Choose a Customer</label>
+                                <select class="select_form">
+                                    <option></option>
+                                    <option></option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <h5 class="mx-1">Product Information</h5>
+                                <label for="form_input" class="mx-1">Product Link</label>
+                                <input type="text" class="input_form mx-1" id="form_input" />
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="form_input" class="mx-1">Product Description</label>
+                                    <textarea class="select_form" rows="5" cols="50"></textarea>
+                                </div>
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col">
+                                            <label for="form_input" class="mx-1">Buy Price</label>
+                                            <input type="text" class="input_form mx-1" id="form_input" />
+                                        </div>
+                                        <div class="col">
+                                            <label for="form_input" class="mx-1">Sell Price</label>
+                                            <input type="text" class="input_form mx-1" id="form_input" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="d-flex">
+                                                <label for="form_input" class="mx-1">Size</label>
+                                                <div class="form-check form-switch mx-1 button-switch">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        role="switch" id="flexSwitchCheckChecked" checked>
+                                                </div>
+                                            </div>
+                                            <input type="text" class="input_form mx-1" id="form_input" />
+                                        </div>
+                                        <div class="col">
+                                            <div class="d-flex">
+                                                <label for="form_input" class="mx-1">Color</label>
+                                                <div class="form-check form-switch mx-1 button-switch">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        role="switch" id="flexSwitchCheckChecked" checked>
+                                                </div>
+                                            </div>
+                                            <input type="text" class="input_form mx-1" id="form_input" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-8">
+                                    <div class="form-group">
+                                        <label for="form_input" class="mx-1">Delivery Number</label>
+                                        <input type="text" class="input_form mx-1" id="form_input" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="form_input" class="mx-1">Order Number</label>
+                                        <input type="text" class="input_form mx-1" id="form_input" />
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="flex items-center justify-center min-h-screen">
+                                        <div class="mb-4 p-4 text-sm w-80">
+                                            <div class="" x-data="previewImage()">
+
+                                                <label for="logo">
+                                                    <div
+                                                        class="w-full h-48 rounded bg-gray-100 border border-gray-200 flex items-center justify-center overflow-hidden">
+                                                        <img x-show="imageUrl" :src="imageUrl"
+                                                            class="w-full object-cover">
+                                                        <div x-show="!imageUrl"
+                                                            class="text-gray-300 flex flex-col items-center">
+                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                class="h-8 w-8 " fill="none" viewBox="0 0 24 24"
+                                                                stroke="currentColor" stroke-width="2">
+                                                                <path stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                    d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                                                            </svg>
+                                                            <div>Image Preview</div>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                                <div>
+                                                    <label for="logo" class="block mb-2 mt-4 font-bold">Upload
+                                                        image..</label>
+                                                    <input class="w-full cursor-pointer" type="file" name="logo"
+                                                        id="logo" @change="fileChosen">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col text-center">
+                                    <button class="btn btn-info text-white">Request Order</button>
+                                </div>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}

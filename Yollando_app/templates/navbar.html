@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg position-absolute top-0 z-index-3 w-100 shadow-none my-3 navbar-transparent">
+    <div class="container">
+        <a class="navbar-brand" href="/" title="Company Name">
+        <div class="mx-2 company-logo"></div>
+        Company Logo
+        </a>
+        <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon mt-2">
+            <span class="navbar-toggler-bar bar1"></span>
+            <span class="navbar-toggler-bar bar2"></span>
+            <span class="navbar-toggler-bar bar3"></span>
+        </span>
+        </button>
+        <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0" id="navigation">
+        <ul class="navbar-nav navbar-nav-hover ms-auto align-items-center">
+            <li class="nav-item dropdown dropdown-hover mx-3 ms-lg-6 ps-2">
+            <a href="/" class="nav-link d-flex justify-content-between cursor-pointer align-items-center hover-underline-animation p-0"
+                id="dropdownMenuPages8" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+            </a>
+            </li>
+            <li class="nav-item dropdown dropdown-hover mx-3 ps-2">
+            <a href="{% url 'shoppingSites' %}" class="nav-link d-flex justify-content-between cursor-pointer align-items-center hover-underline-animation p-0"
+                id="dropdownMenuBlocks" data-bs-toggle="dropdown" aria-expanded="false">
+                Shopping Sites
+            </a>
+            </li>
+            <li class="nav-item dropdown dropdown-hover mx-3 ps-2">
+            <a href="about-us" class="nav-link d-flex justify-content-between cursor-pointer align-items-center hover-underline-animation p-0"
+                id="dropdownMenuBlocks" data-bs-toggle="dropdown" aria-expanded="false">
+                About Us
+            </a>
+            </li>
+            <li class="nav-item dropdown dropdown-hover mx-3 ps-2">
+            <a href="{% url 'Login' %}" class="nav-link d-flex justify-content-between cursor-pointer align-items-center hover-underline-animation p-0"
+                id="dropdownMenuBlocks" data-bs-toggle="dropdown" aria-expanded="false">
+                Login
+            </a>
+            </li>
+            <li class="nav-item my-auto mx-3">
+            <a href="{% url 'signup' %}" class="btn btn-sm mb-0 me-1 mt-2 mt-md-0">Create An Account</a>
+            </li>
+        </ul>
+        </div>
+    </div>
+</nav>
+<script>
+    links = document.getElementsByClassName('nav-link');
+    for(var i=0; i<links.length; i++)
+    {
+        if(links[i].href == window.location.href)
+        {
+            links[i].classList.add('active')
+        }
+    }
+</script>

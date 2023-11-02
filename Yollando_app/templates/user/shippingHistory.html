@@ -1,0 +1,54 @@
+{% extends 'user/base.html' %}
+{% block body %}
+<div class="align-items-center min-vh-100 pt-3 pb-5 px-3">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="card z-index-0">
+                    <div class="card-header card-header-dark p-0 py-3 pe-1 position-relative mt-n4 mx-3 z-index-2 text-left">
+                        <a class="text-white w-100 my-4 mb-2 mx-4">Shipping History</a>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="d-flex justify-content-between">
+                                <div class="col-md-6">
+                                    <button class="btn export-button" type="submit">Export</button>
+                                </div>
+                                <form class="form-inline me-md-3">
+                                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                </form>
+                            </div>
+                        </div>
+
+                        <div style="overflow-x:auto;">
+                            <table>
+                                <tr>
+                                <th>Customer</th>
+                                <th>Invoice</th>
+                                <th>Carrier Company</th>
+                                <th>Price</th>
+                                <th>Tracking Number</th>
+                                <th>Date</th>
+                                <th class="text-center">Action</th>
+                                </tr>
+                                {% for i in '1234567890123456789123456'%}
+                                <tr>
+                                <td><div>Ibrahim Amziane</div></td>
+                                <td><div>SVKB98757129813</div></td>
+                                <td><div>UPS Express</div></td>
+                                <td><div>$70.9</div></td>
+                                <td><div>4432401256</div></td>
+                                <td><div>24th December 2021</div></td>
+                                <td class="text-center"><div><i class="fa fa-solid fa-eye"></div></td>
+                                </tr>
+                                {% endfor %}
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}

@@ -1,0 +1,74 @@
+{% extends 'user/base.html' %}
+{% block body %}
+<div class="align-items-center min-vh-100 pt-3 pb-5 px-3">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="card z-index-0">
+                    <div
+                        class="card-header card-header-dark p-0 py-3 pe-1 position-relative mt-n4 mx-3 z-index-2 text-left">
+                        <a class="text-white w-100 my-4 mb-2 mx-4">My Packages</a>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="d-flex justify-content-between">
+                                <div class="col-md-6">
+                                    <button class="btn export-button" type="submit">Export</button>
+                                </div>
+
+                                <button class="btn customer-add-button" type="submit">Add a Customer</button>
+
+                                <form class="form-inline me-md-3">
+                                    <input class="form-control mr-sm-2" type="search" placeholder="Search"
+                                        aria-label="Search">
+                                </form>
+
+                            </div>
+                        </div>
+
+                        <div style="overflow-x:auto;">
+                            <table>
+                                <tr>
+                                    <th>ID #</th>
+                                    <th>Customer</th>
+                                    <th>Phone</th>
+                                    <th>Date Added</th>
+                                    <th>User</th>
+                                    <th>Action</th>
+                                </tr>
+
+                                {% for i in '1234567890123456789123456'%}
+                                <tr>
+                                    <td>
+                                        <div>
+                                            A3756
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>Nour Samravi</div>
+                                        <div>noursww@icloud.com</div>
+                                    </td>
+                                    <td>
+                                        <div>+45/31 33 34 35</div>
+                                    </td>
+                                    <td>
+                                        <div>24th December 2021</div>
+                                    </td>
+                                    <td>
+                                        <div>Nail Al Nasser</div>
+                                    </td>
+                                    <td>
+                                        <div>Action</div>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}
